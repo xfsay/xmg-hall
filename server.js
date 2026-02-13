@@ -275,12 +275,12 @@ app.delete('/api/admin/items/:id', (req, res) => {
   res.json({ ok: true });
 });
 
-app.get('/xfsay', (req, res) => {
+app.get('/xmg-7f3', (req, res) => {
   res.sendFile(ADMIN_PAGE_PATH);
 });
 
-app.get('/xfsay/', (req, res) => {
-  res.redirect(301, '/xfsay');
+app.get('/xmg-7f3/', (req, res) => {
+  res.redirect(301, '/xmg-7f3');
 });
 
 app.get(['/admin', '/Admin'], (req, res) => {
