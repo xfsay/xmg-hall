@@ -48,7 +48,7 @@ npm start
 
 ```
 public/      # 前台资源（大厅/发布页/脚本/样式）
-private/     # 后台页面与诱导页（不对外静态公开）
+private/     # 后台页面（不对外静态公开）
 server.js    # 后端服务
 ```
 
@@ -61,3 +61,4 @@ server.js    # 后端服务
 ## License
 
 MIT
+
