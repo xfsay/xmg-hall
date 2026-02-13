@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>管理员后台 - 小马糕口令大厅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="tag">管理员</p>
+        <h1>举报管理后台</h1>
+        <p class="sub">查看被举报口令与举报次数，必要时快速删除。</p>
+      </div>
+      <div class="stats-panel">
+        <div class="stat">
+          <span class="label">操作提示</span>
+          <span class="value">需账号密码</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>管理员登录</h2>
+      </div>
+      <div class="admin-controls">
+        <input id="admin-user" type="text" placeholder="管理员账号" />
+        <input id="admin-pass" type="password" placeholder="管理员密码" />
+        <button id="load" class="btn primary">登录并加载</button>
+      </div>
+    </section>
+
+    <div id="admin-sections" hidden>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>公告管理</h2>
+          <p id="announcement-status">当前无公告</p>
+        </div>
+        <div class="publish-form">
+          <label>
+            <span>公告内容</span>
+            <textarea id="announcement-text" rows="3" maxlength="500" placeholder="输入公告内容，最多 500 字"></textarea>
+          </label>
+          <div class="item-actions">
+            <button id="publish-announcement" class="btn primary">发布公告</button>
+            <button id="clear-announcement" class="btn ghost">清空公告</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="hall">
+        <div class="panel-head hall-head">
+          <h2>被举报口令</h2>
+          <button id="refresh" class="btn ghost">刷新</button>
+        </div>
+        <div id="admin-items" class="items"></div>
+      </section>
+
+      <footer class="foot">
+        <a class="admin-link" href="/">返回大厅</a>
+      </footer>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="/admin.js"></script>
+</body>
+</html>

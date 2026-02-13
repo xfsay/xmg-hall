@@ -1,0 +1,15 @@
+﻿version: "3.8"
+services:
+  xmg-hall:
+    build: .
+    container_name: xmg-hall
+    ports:
+      - "3000:3000"
+    environment:
+      TZ: ${TZ:-Asia/Shanghai}
+      PORT: ${PORT:-3000}
+      ADMIN_USER: ${ADMIN_USER}
+      ADMIN_PASS: ${ADMIN_PASS}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

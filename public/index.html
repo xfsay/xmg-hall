@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小马糕口令大厅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="tag">王者荣耀 · 小马糕</p>
+        <h1>口令发布大厅</h1>
+        <p class="sub">公开发布、公开复制。每日零点自动清空，保持大厅干净有序。</p>
+      </div>
+      <div class="stats-panel">
+        <div class="stat">
+          <span class="label">今日发布</span>
+          <span class="value" id="stat-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">距离清空</span>
+          <span class="value mono" id="stat-countdown">--:--:--</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="announcement" class="panel announcement" hidden>
+      <div class="panel-head">
+        <h2>公告</h2>
+        <p id="announcement-time"></p>
+      </div>
+      <div id="announcement-text" class="announcement-text"></div>
+    </section>
+
+    <section class="hall">
+      <div class="panel-head hall-head">
+        <h2>大厅口令</h2>
+        <div class="item-actions hall-actions">
+          <button id="refresh" class="btn ghost">刷新大厅</button>
+          <a class="btn primary" href="/publish.html">发布口令</a>
+        </div>
+      </div>
+      <div id="items" class="items"></div>
+    </section>
+
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="hall.js"></script>
+</body>
+</html>

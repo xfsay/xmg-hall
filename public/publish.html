@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>发布口令 - 小马糕口令大厅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="tag">王者荣耀 · 小马糕</p>
+        <h1>发布口令</h1>
+        <p class="sub">填写价格与口令即可发布，发布后仅自己可删除。</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>填写口令</h2>
+        <p>发布后会出现在大厅。</p>
+      </div>
+      <form id="publish-form" class="publish-form">
+        <label>
+          <span>小马糕价格</span>
+          <input id="price" name="price" type="text" placeholder="例如：999" maxlength="30" required />
+        </label>
+        <label>
+          <span>小马糕口令</span>
+          <textarea id="code" name="code" rows="3" placeholder="请输入小马糕口令" maxlength="200" required></textarea>
+        </label>
+        <div class="item-actions">
+          <button type="submit" class="btn primary">发布口令</button>
+          <a class="btn ghost" href="/">返回大厅</a>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="success-modal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <h3>发布成功</h3>
+      <p>口令已发布到大厅。</p>
+      <div class="item-actions">
+        <button id="continue-publish" class="btn ghost">继续发布</button>
+        <button id="back-hall" class="btn primary">返回大厅</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="publish.js"></script>
+</body>
+</html>
